@@ -1,0 +1,180 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+#hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#hero .btn {
+  background: #00f;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#hero .btn:hover {
+  background: #0ff;
+}
+
+/* PORTFOLIO */
+#portfolio {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ABOUT */
+#about {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* CONTACT */
+#contact {
+  padding: 80px 0;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#contact input, #contact textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact button {
+  background: #00f;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background: #0ff;
+}
+
+#contact .socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#contact .socials a {
+  color: #00f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact .socials a:hover {
+  color: #0ff;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 36px;
+  }
+  #hero p {
+    font-size: 18px;
+  }
+}
