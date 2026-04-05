@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyan Socials – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo">Tyan Socials</div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">O mnie</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-content">
+      <h1>Cześć, jestem Tyan</h1>
+      <p>Montażysta i Social Media Manager. Tworzę dynamiczne treści, które przyciągają uwagę.</p>
+      <a href="#portfolio" class="btn">Zobacz moje projekty</a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Moje Projekty</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Projekt 1">
+          <h3>Nazwa Projektu 1</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="project2.jpg" alt="Projekt 2">
+          <h3>Nazwa Projektu 2</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="project3.jpg" alt="Projekt 3">
+          <h3>Nazwa Projektu 3</h3>
+        </div>
+        <!-- Dodaj kolejne projekty -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>O mnie</h2>
+      <p>Jestem doświadczonym montażystą i social media managerem. Tworzę angażujące treści wideo i pomagam markom wyróżnić się online. Pracuję głównie w DaVinci Resolve i Vegas Pro, ale potrafię też przygotować pełne strategie social media.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Masz projekt do zrealizowania? Napisz do mnie!</p>
+      <form action="mailto:twojemail@przyklad.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Twoje imię" required>
+        <input type="email" name="email" placeholder="Twój email" required>
+        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+      </form>
+      <div class="socials">
+        <a href="https://instagram.com/tyan" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@tyan" target="_blank">TikTok</a>
+        <a href="https://youtube.com/@tyan" target="_blank">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Tyan Socials | Wszelkie prawa zastrzeżone</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
