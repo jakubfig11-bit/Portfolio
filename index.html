@@ -3,91 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tyan Socials – Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Portfolio | Video Editor</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1536240478700-b869070f9279') center/cover;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      backdrop-filter: blur(10px);
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 14px 30px;
+      background: #00ff88;
+      color: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1f1f1f;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    .card p {
+      padding: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #aaa;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="logo">Tyan Socials</div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">O mnie</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="container hero-content">
-      <h1>Cześć, jestem Tyan</h1>
-      <p>Montażysta i Social Media Manager. Tworzę dynamiczne treści, które przyciągają uwagę.</p>
-      <a href="#portfolio" class="btn">Zobacz moje projekty</a>
-    </div>
-  </section>
+<header>
+  <h1>Twoje Imię</h1>
+  <p>Video Editor | Social Media</p>
+  <a href="#portfolio" class="btn">Zobacz portfolio</a>
+</header>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="container">
-      <h2>Moje Projekty</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Projekt 1">
-          <h3>Nazwa Projektu 1</h3>
-        </div>
-        <div class="portfolio-item">
-          <img src="project2.jpg" alt="Projekt 2">
-          <h3>Nazwa Projektu 2</h3>
-        </div>
-        <div class="portfolio-item">
-          <img src="project3.jpg" alt="Projekt 3">
-          <h3>Nazwa Projektu 3</h3>
-        </div>
-        <!-- Dodaj kolejne projekty -->
-      </div>
-    </div>
-  </section>
+<section id="portfolio">
+  <h2>Moje Projekty</h2>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2>O mnie</h2>
-      <p>Jestem doświadczonym montażystą i social media managerem. Tworzę angażujące treści wideo i pomagam markom wyróżnić się online. Pracuję głównie w DaVinci Resolve i Vegas Pro, ale potrafię też przygotować pełne strategie social media.</p>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+      <p>Projekt 1 – Reel / TikTok</p>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Kontakt</h2>
-      <p>Masz projekt do zrealizowania? Napisz do mnie!</p>
-      <form action="mailto:twojemail@przyklad.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Twoje imię" required>
-        <input type="email" name="email" placeholder="Twój email" required>
-        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-        <button type="submit">Wyślij</button>
-      </form>
-      <div class="socials">
-        <a href="https://instagram.com/tyan" target="_blank">Instagram</a>
-        <a href="https://tiktok.com/@tyan" target="_blank">TikTok</a>
-        <a href="https://youtube.com/@tyan" target="_blank">YouTube</a>
-      </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <p>Projekt 2 – YouTube</p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Tyan Socials | Wszelkie prawa zastrzeżone</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <p>Projekt 3 – Reklama</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section>
+  <h2>O mnie</h2>
+  <p style="text-align:center; max-width:600px; margin:auto; color:#bbb;">
+    Jestem montażystą z dużym doświadczeniem. Tworzę dynamiczne materiały na social media oraz długie formy na YouTube.
+  </p>
+</section>
+
+<footer>
+  © 2026 Twoje Imię
+</footer>
+
 </body>
 </html>
