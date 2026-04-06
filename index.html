@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio | Video Editor</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -16,63 +15,48 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: radial-gradient(circle at top, #111, #000);
+  background: #0a0a0a;
   color: #fff;
 }
 
-/* HERO */
-
 header {
   height: 100vh;
-  background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,1)),
-              url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
+  flex-direction: column;
   text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7), #000),
+              url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
 }
 
-header h1 {
+h1 {
   font-size: 4rem;
-  animation: fadeUp 1s ease forwards;
 }
 
-header p {
+p {
   color: #aaa;
-  margin-top: 10px;
-  animation: fadeUp 1.5s ease forwards;
 }
 
 .btn {
-  margin-top: 30px;
-  padding: 14px 30px;
-  border-radius: 12px;
-  background: linear-gradient(45deg, #00ffcc, #00aaff);
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #00ffaa, #00aaff);
   color: #000;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
-  animation: fadeUp 2s ease forwards;
 }
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
-/* SEKCJE */
 
 section {
-  padding: 100px 10%;
+  padding: 80px 10%;
 }
 
-/* GRID VIDEO */
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 .grid {
   display: grid;
@@ -81,38 +65,29 @@ section {
 }
 
 .card {
-  background: rgba(255,255,255,0.05);
   border-radius: 20px;
   overflow: hidden;
-  backdrop-filter: blur(20px);
-  transition: 0.4s;
-}
-
-.card video {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  background: #111;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: scale(1.05);
 }
 
-/* O MNIE */
-
-.about {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  color: #bbb;
+/* 🔥 VIDEO FIX */
+video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 /* ANIMACJE */
-
 .hidden {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
 .show {
@@ -120,25 +95,11 @@ section {
   transform: translateY(0);
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* FOOTER */
-
 footer {
   text-align: center;
   padding: 40px;
-  color: #777;
+  color: #666;
 }
-
 </style>
 </head>
 
@@ -151,30 +112,29 @@ footer {
 </header>
 
 <section id="portfolio" class="hidden">
-  <h2 style="text-align:center; margin-bottom:50px;">Moje montaże</h2>
+  <h2>Moje montaże</h2>
 
   <div class="grid">
 
     <div class="card">
-      <video src="video1.mp4" autoplay muted loop></video>
+      <video autoplay muted loop playsinline>
+        <source src="video2.mp4" type="video/mp4">
+      </video>
     </div>
 
     <div class="card">
-      <video src="video2.mp4" autoplay muted loop></video>
-    </div>
-
-    <div class="card">
-      <video src="video3.mp4" autoplay muted loop></video>
+      <video autoplay muted loop playsinline>
+        <source src="video3.mp4" type="video/mp4">
+      </video>
     </div>
 
   </div>
 </section>
 
 <section class="hidden">
-  <h2 style="text-align:center; margin-bottom:30px;">O mnie</h2>
-  <p class="about">
-    Jestem montażystą z dużym doświadczeniem. Tworzę dynamiczne treści na TikTok, Instagram oraz YouTube.
-    Stawiam na jakość, tempo i nowoczesny styl.
+  <h2>O mnie</h2>
+  <p style="max-width:600px; margin:auto; text-align:center;">
+    Jestem montażystą z dużym doświadczeniem. Tworzę dynamiczne materiały na TikTok, Instagram oraz YouTube.
   </p>
 </section>
 
@@ -183,19 +143,15 @@ footer {
 </footer>
 
 <script>
-
-/* ANIMACJE SCROLL */
-
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
+    if(entry.isIntersecting){
       entry.target.classList.add("show");
     }
   });
 });
 
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-
 </script>
 
 </body>
